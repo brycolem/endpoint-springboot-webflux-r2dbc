@@ -27,7 +27,7 @@ end
 
 -- Run the container
 local run_command = string.format(
-    "podman run -d -p 8001:8001 --network=host " ..
+    "podman run -d -p 8001:8001 --network bench-network " ..
     "-e DATABASE=%q -e DB_USER=%q -e DB_PWD=%q " ..
     "--replace --name springboot-webflux-r2dbc springboot-webflux-r2dbc:latest",
     DATABASE, DB_USER, DB_PWD

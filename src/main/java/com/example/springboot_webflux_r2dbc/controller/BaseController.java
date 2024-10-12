@@ -31,7 +31,7 @@ public class BaseController {
         links.put("delete_application", createLink(baseUrl + "/application/{application_id}", "DELETE"));
 
         response.put("_links", links);
-        return Mono.just(response); // Return a reactive Mono
+        return Mono.just(response);
     }
 
     private Map<String, String> createLink(String href, String method) {
